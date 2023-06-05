@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* 주석처리 */
+    /* box-sizing: border-box; */
+}
+
+li {
+    /* li태그 안에 들어오는 기호 없앨려고 */
+    list-style-type: none;
+}
+
+/* 보여줄 구간의 높이와 넓이 설정 */
+/* # 기호는 HTML id 속성을 CSS 선택자로 지정할 때 id명 앞에 붙이는 기호입니다. */
+#slideShow {
+    /* 500 / 300 -> 1160 -> 989 ->  */
+    width: 1160px;
+
+    /* 300 -> 235로 변경 -> 300으로 변경 */
+    height: 300px;
+    /* 이거 추가한거 */
+    margin: 0 auto;
+    /* 요소 자기기준으로 배치 */
+    position: relative;
+
+    /* 주석처리함 */
+    /* margin: 50px auto; */
+
+    /* 일단 안에 수정을위해 auto로해놈 */
+    /* 오버플로우 auto에서 hidden으로 변경 */
+    overflow: hidden;
+    /*리스트 형식으로 이미지를 일렬로 
+    정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은
+    hidden으로 숨겨줘야됨*/
+    background-color: #6F6F6F;
+}
+
+
+.slides {
+    /* absolute  -> relative  */
+    position: relative;
+
+    /* 추가사항  margin 3개*/
+    /* 없는게 피그마랑 모양세가 같다 */
+    /* display: table; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11px;
+
+    /* 어디쓰이는지몰라서 주석처리 */
+    left: 0;
+    /* top: 0; */
+
+    /* 1160 에서 -> 577 변경 */
+    /* width: 1160; 슬라이드할 사진과 마진 총 넓이  자바에서 넓이만듬*/
+
+    transition: left 0.5s ease-out;
+    /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+
+    background-color: #D9D9D9;
+}
+
+/* 첫 번째 슬라이드 가운데에 정렬하기위해
+  첫번째 슬라이드만 margin-left조정 */
+
+/* 첫번째 슬라이드를 가운데 정렬할 필요가없어서 제거 */
+/* .slides li:first-child{
+    margin-left: 100px;
+  } */
+
+/* 슬라이드들 옆으로 정렬 */
+.slides li:not(:last-child) {
+    float: left;
+    /* 마진값을 100 -> 16으로 변경 */
+    margin-right: 16px;
+}
+
+.slides li {
+    float: left;
+}
+
+.controller span {
+    /* 부모 엘리먼트 위에 겹쳐서 배치할 수도 있습니다. */
+    position: absolute;
+
+    background-color: #D9D9D9;
+
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px 20px;
+    /* 50 % -> 40 % 변경 */
+    top: 40%;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+/* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
+.controller span:hover {
+    background-color: rgba(128, 128, 128, 0.11);
+}
+
+.prev {
+    left: 10px;
+}
+
+/* 이전 화살표에 마우스 커서가 올라가 있을때 
+  이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+.prev:hover {
+    transform: translateX(-10px);
+}
+
+.next {
+    right: 10px;
+}
+
+/* 다음 화살표에 마우스 커서가 올라가 있을때 
+  이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+.next:hover {
+    transform: translateX(10px);
+}
+.title{
+    text-align: center;
+    margin-top: 12px;
+}

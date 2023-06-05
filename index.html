@@ -1,0 +1,39 @@
+<!-- 1. 오른쪽 화살표를 누르면 -989만큼 움직여야되는데 -925만큼만 움직여서 약간 짤린다. 해결해야될듯 -->
+<!-- <div안에 div를 하나더 생성해서 제목과 화살표를 만들어야되나?></div> -->
+
+<!DOCTYPE html>
+<!-- lang 는 언어 ko 한국어 -->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>슬라이드</title>
+  <link rel="stylesheet" href="style/movies.css">
+</head>
+<body>
+  <!-- div  => id를 class로변경 -->
+  <div id ="slideShow">
+    <ul class="slides">
+      <div>
+      <li><img src="http://placehold.it/185x235" alt="">
+        <p class = "title">제목</p>
+      </li>
+      <!-- 제목 넣어보기 -->
+      <li><img src="http://placehold.it/185x235" alt=""></li>
+      <li><img src="http://placehold.it/185x235" alt=""></li>
+      <li><img src="http://placehold.it/185x235" alt=""></li>
+      <li><img src="http://placehold.it/185x235" alt=""></li>
+    </div>
+    </ul>  
+    <p class="controller">
+      
+        <!-- &lang: 왼쪽 방향 화살표
+        &rang: 오른쪽 방향 화살표 -->
+        <span class="prev">&lang;</span>  
+        <span class="next">&rang;</span>
+      </p>
+  </div>
+  
+  <script src="src/slideShow.js"></script>
+</body>
